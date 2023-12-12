@@ -2,7 +2,11 @@ class UserData {
   String nama;
   int umur;
   String email;
-  int nomor;
 
-  UserData(this.nama, this.umur, this.email, this.nomor);
+  UserData(this.nama, this.umur, this.email);
+
+  // Metode untuk menghapus indeks di depan nama (mengembalikan nama tanpa indeks)
+  String getNamaWithoutIndex() {
+    return nama.substring(nama.indexOf('.') + 2);
+  }
 }
