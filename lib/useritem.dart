@@ -7,9 +7,7 @@ class UserItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-        title: Text(contact),
-        leading: index % 2 == 0(
+    return Row(
       children: [
         CircleAvatar(
           backgroundColor: Color.fromARGB(255, 157, 146, 252),
