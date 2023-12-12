@@ -74,6 +74,13 @@ int IndexDipilih = 0;
                 padding: EdgeInsets.all(5),
                 child: ElevatedButton(
                   onPressed: () {
+                    
+                    int jumlahUmur = int.parse(Umur.text);
+
+                    // Menambah record sebanyak jumlah umur yang dimasukkan
+                    for (int i = 0; i < jumlahUmur; i++) {
+                      daftarUser.add(UserData("${daftarUser.length + 1}. ${Nama.text}", int.parse(Umur.text), Email.text));
+                    }
                         try{
                       if(Nama.text.isEmpty || Umur.text.isEmpty || Email.text.isEmpty )
                       throw new Exception("Isian Tidak Boleh Kosong");
